@@ -36,19 +36,6 @@ public enum PaymentStatus {
 
 public abstract static class PaymentService {
     public abstract void handle();
-
-    public static PaymentService create(PaymentStatus status) {
-        if (status == PaymentStatus.PENDING) {
-            return PaymentServiceRetry.create();
-        } else if (status == PaymentStatus.APPROVED) {
-            return PaymentServiceRetry.create();
-        } else if (status == PaymentStatus.CANCELLED) {
-            return PaymentServiceRetry.create();
-        } else {
-            return PaymentServiceNone.create();
-        }
-    }
-
 }
 
 public static final class PaymentServiceRetry extends PaymentService {
