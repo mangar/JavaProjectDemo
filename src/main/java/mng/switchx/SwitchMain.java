@@ -1,16 +1,11 @@
 //package mng.main;
 
 void main() {
-    IO.println("⚠️ Switch.Main ️️ ⚠️");
+    IO.println("⚠️ Switch.Main ️️ ⚠️\n------------------");
 
     PaymentStatus.PENDING.handle();
-
-
     PaymentStatus.APPROVED.handle();
-
-
     PaymentStatus.CANCELLED.handle();
-
 
 }
 
